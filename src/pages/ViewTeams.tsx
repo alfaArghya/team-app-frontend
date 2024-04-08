@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../components/ui/Navbar";
 import axios from "axios";
 import { API_URL } from "../config";
@@ -28,7 +28,9 @@ const ViewTeams = () => {
           setTeams(response.data.findTeams);
           setLoading(false);
         })
-        .catch((error) => {});
+        .catch((err) => {
+          console.error(err);
+        });
     }
     fetchData();
   }, []);

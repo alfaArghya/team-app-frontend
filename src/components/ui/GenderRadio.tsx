@@ -1,7 +1,7 @@
-import { RecoilState, useRecoilState } from "recoil";
+import { RecoilState, useSetRecoilState } from "recoil";
 
 const GenderRadio = ({ atomName }: { atomName: RecoilState<string> }) => {
-  const [value, setValue] = useRecoilState(atomName);
+  const setValue = useSetRecoilState(atomName);
   return (
     <div className="mb-4">
       <h3 className="mb-1 text-sm font-medium text-gray-900">Gender</h3>

@@ -1,4 +1,4 @@
-import { useRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 import { LabelledInputType } from "../../types";
 
 const LabelledInput = ({
@@ -8,7 +8,7 @@ const LabelledInput = ({
   placeholder,
 }: // onChange,
 LabelledInputType) => {
-  const [value, setValue] = useRecoilState(atomName);
+  const setValue = useSetRecoilState(atomName);
   return (
     <>
       <div className="mb-4">
@@ -18,7 +18,6 @@ LabelledInputType) => {
         <input
           onChange={(e) => {
             setValue(e.target.value);
-            console.log(value);
           }}
           type={type || "test"}
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "

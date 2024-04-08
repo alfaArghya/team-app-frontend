@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../components/ui/Navbar";
 import UserCard from "../components/ui/UserCard";
 import axios from "axios";
@@ -33,7 +33,9 @@ const UserList = () => {
           setUsers(response.data.users);
           setLoading(false);
         })
-        .catch((error) => {});
+        .catch((err) => {
+          console.error(err);
+        });
     }
 
     fetchData();
@@ -54,7 +56,6 @@ const UserList = () => {
           }),
         })
         .then((response) => {
-          console.log(response.data.users);
           setUsers(response.data.users);
         });
     } catch (err) {

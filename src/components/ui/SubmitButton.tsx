@@ -33,8 +33,6 @@ export const SignUpSubmit = () => {
     domain: useRecoilValue(domainAtom),
   };
   const sendRequest = async () => {
-    console.log(signUpInput);
-
     try {
       // send user data to server
       const response = await axios.post(
@@ -80,7 +78,6 @@ export const SignInSubmit = () => {
       localStorage.setItem("token", jwt);
       localStorage.setItem("email", signInInput.email);
 
-      //navigate to blogs route
       navigate("/userList");
     } catch (err) {
       alert("Invalid username or password");
