@@ -46,15 +46,18 @@ const UserList = () => {
     try {
       // send user data to server
       await axios
-        .get(`${API_URL}/api/users/name`, {
-          headers: {
-            Authorization: localStorage.getItem("token"),
-          },
-          data: JSON.stringify({
+        .post(
+          `${API_URL}/api/users/name`,
+          {
             first_name: words[0],
             last_name: words[1],
-          }),
-        })
+          },
+          {
+            headers: {
+              Authorization: localStorage.getItem("token"),
+            },
+          }
+        )
         .then((response) => {
           setUsers(response.data.users);
         });
