@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+```bash
+https://alfa-team-app.netlify.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# NOTE! - it may take some time to create or login a account, Because backend server is running on a free tier server
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+# all mock account's password same as email
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# UI
+
+1. Create account
+   <img src="./public/signup.png"/>
+   ***
+2. Login
+   <img src="./public/signin.png"/>
+   ***
+3. User card  
+   <img src="./public/userList.png"/>
+   ***
+4. Search By name
+   <img src="./public/searchByName.png"/>
+   ***
+5. Teams
+   <img src="./public/teams.png"/>
+   ***
+6. Team
+   <img src="./public/team.png"/>
